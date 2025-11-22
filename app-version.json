@@ -1,0 +1,12 @@
+{
+  "latestVersion": "1.0.0",
+  "latestBuildNumber": 1,
+  "downloadUrl": "https://Vipul2704.github.io/finance-tracker-updates/app-release.apk",
+  "forceUpdate": false,
+  "updateMessage": "A new version of Personal Finance Tracker is available!",
+  "whatsNew": [
+    "Initial release",
+    "Offline expense tracking",
+    "AI-powered insights"
+  ]
+}
