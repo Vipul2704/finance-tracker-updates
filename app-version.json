@@ -1,11 +1,14 @@
 {
   "latestVersion": "1.0.0",
-  "latestBuildNumber": 2,
+  "latestBuildNumber": 1,
   "downloadUrl": "https://Vipul2704.github.io/finance-tracker-updates/download.html",
   "forceUpdate": true,
-  "updateMessage": "🎉 Personal Finance Tracker v1.1.0 is here!",
+  "updateMessage": "🎉 Personal Finance Tracker v1.0.0 is here!",
   "whatsNew": [
-    "Click update to view the full list of new features on our website with apk."
-    
+    "Track expenses offline",
+    "AI-powered financial insights",
+    "Secure password protection",
+    "Dark mode support",
+    "Performance improvements"
   ]
 }
