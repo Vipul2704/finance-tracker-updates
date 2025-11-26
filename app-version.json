@@ -1,12 +1,10 @@
 {
-  "latestVersion": "1.2.1",
-  "latestBuildNumber": 1000,
+  "latestVersion": "1.1.0",
+  "latestBuildNumber": 3,
   "downloadUrl": "https://Vipul2704.github.io/finance-tracker-updates/download.html",
-  "forceUpdate": true,
-  "updateMessage": "⚠️ Please update to the latest version to continue using the app!",
+  "forceUpdate": false,
+  "updateMessage": "🎉 Personal Finance Tracker v1.0.1 is here!",
   "whatsNew": [
-    "✅ New features and improvements",
-    "🔒 Security updates",
-    "🐛 Bug fixes"
+    "✅ See on website"
   ]
 }
