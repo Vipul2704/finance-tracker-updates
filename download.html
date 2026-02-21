@@ -734,6 +734,69 @@
         margin-top: 12px;
     }
 }
+/* 🔔 POPUP STYLING */
+.popup-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 999999;
+}
+
+.popup-box {
+    background: #11111b;
+    border: 1px solid rgba(59, 130, 246, 0.3);
+    padding: 30px;
+    border-radius: 16px;
+    max-width: 400px;
+    width: 90%;
+    text-align: center;
+    box-shadow: 0 0 30px rgba(59, 130, 246, 0.4);
+    animation: popupFade 0.4s ease;
+}
+
+.popup-box h2 {
+    color: #3b82f6;
+    margin-bottom: 16px;
+}
+
+.popup-box p {
+    color: #e5e7eb;
+    font-size: 14px;
+    margin-bottom: 12px;
+    line-height: 1.6;
+}
+
+.popup-btn {
+    margin-top: 15px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 8px;
+    background: linear-gradient(135deg, #3b82f6, #8b5cf6);
+    color: white;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.popup-btn:hover {
+    transform: scale(1.05);
+}
+
+@keyframes popupFade {
+    from {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
     </style>
 </head>
 <body>
@@ -765,58 +828,23 @@
 <div class="feature-grid">
 
  <div class="feature-item" onclick="toggleDescription(this)">
-    <div><span class="highlight">Backup & Restore 📦</span></div>
+    <div><span class="highlight">Animation Screen 🎆</span></div>
     <div class="feature-description">
-      Users can now create and restore backups easily, including photos saved in the app.
+      Now you see animation screen after Login.
     </div>
   </div>
 
   <div class="feature-item" onclick="toggleDescription(this)">
-    <div><span class="highlight">Smooth Expense/Income Form 💵</span></div>
+    <div><span class="highlight">Smart Insight 🧠</span></div>
     <div class="feature-description">
-      The expense and income form now works smoothly without any lag or input issues.
+      Redesign Smart Insight page with more data analytics.
     </div>
   </div>
 
   <div class="feature-item" onclick="toggleDescription(this)">
-    <div><span class="highlight">Lock PIN Upgrade 🔐</span></div>
+    <div><span class="highlight">Bug Fix ✅</span></div>
     <div class="feature-description">
-      Lock PIN now supports 4–6 digit validation for enhanced security.
-    </div>
-  </div>
-
-  <div class="feature-item" onclick="toggleDescription(this)">
-    <div><span class="highlight">Multi-Currency Support 🌍</span></div>
-    <div class="feature-description">
-      The app now supports multiple currencies: Indian Rupee, US Dollar, Euro, British Pound, Japanese Yen, Australian Dollar, and Canadian Dollar.
-    </div>
-  </div>
-
-  <div class="feature-item" onclick="toggleDescription(this)">
-    <div><span class="highlight">App Logo Update 💸</span></div>
-    <div class="feature-description">
-      The app logo has been updated from a dollar sign to a flying money symbol for a fresh look.
-    </div>
-  </div>
-
-  <div class="feature-item" onclick="toggleDescription(this)">
-    <div><span class="highlight">Recovery Code Feature 🔁</span></div>
-    <div class="feature-description">
-      You can now view or regenerate your recovery code for backup and forgot password options.
-    </div>
-  </div>
-
-  <div class="feature-item" onclick="toggleDescription(this)">
-    <div><span class="highlight">Privacy Policy Added 📜</span></div>
-    <div class="feature-description">
-      A complete privacy policy has been implemented to ensure user data safety.
-    </div>
-  </div>
-
-  <div class="feature-item" onclick="toggleDescription(this)">
-    <div><span class="highlight">Single Account Restriction 👤</span></div>
-    <div class="feature-description">
-      The app now allows creation of only one account per user to maintain data consistency and security.
+      Bug Fix in budget page.
     </div>
   </div>
 
@@ -870,6 +898,32 @@
     </div>
 </div>
 
+<!-- 🔔 Backup Warning Popup -->
+<div id="backupPopup" class="popup-overlay">
+    <div class="popup-box">
+        <h2>🚨 Important Update Notice</h2>
+
+        <p style="margin-bottom:18px;">
+            We are preparing to launch our app on the <strong>Google Play Store</strong> 🎉  
+            Because of this, the <strong>App ID has been changed</strong>.
+        </p>
+
+        <div style="text-align:left; font-size:14px; line-height:1.7; color:#e5e7eb;">
+            <p>📌 Please follow these steps carefully:</p>
+
+            <p>1️⃣ Create a backup file from your <strong>old APK</strong></p>
+            <p>2️⃣ Delete the old version from your device</p>
+            <p>3️⃣ Reinstall the latest APK from this page</p>
+        </div>
+
+        <p style="margin-top:18px; font-size:13px; color:#9ca3af;">
+            🔒 Your data is safe if backup is created properly.
+        </p>
+
+        <button onclick="closePopup()" class="popup-btn">Cancel</button>
+    </div>
+</div>
+
 
 
 <div class="footer">
@@ -893,7 +947,11 @@
         element.classList.toggle('active');
     }
 </script>
-
+<script>
+function closePopup() {
+    document.getElementById("backupPopup").style.display = "none";
+}
+</script>
 <script>
 // 🎨 PAPER UNFOLD EFFECT (Shows every time)
 window.addEventListener('load', function() {
@@ -927,6 +985,7 @@ window.addEventListener('load', function() {
         glow.remove();
     }, 2500);
 });
+
 </script>
 </body>
 </html>
